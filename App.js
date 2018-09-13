@@ -7,13 +7,19 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Dimensions} from 'react-native';
+import {Platform, StyleSheet, Text, ScrollView, View, Dimensions} from 'react-native';
+import RouterConfig from './Router';
 
 
 // components
-import Bananas from './src/components/Banana';
-import Greet from './src/components/Greet';
-import Submit from './src/components/Submit';
+// import Banana from './src/components/Banana';
+// import Greet from './src/components/Greet';
+// import Submit from './src/components/Submit';
+// import List from './src/components/List';
+
+//reuse of group components
+// import { Banana, Submit } from './src/common';
+
 
 const instructions = Platform.select({
   ios: 'Hello World with React-Native 16.5 at ' + new Date(),
@@ -29,30 +35,20 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-       
-        {/* <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text> */}
-
-        <Text style={styles.welcome}> { title } </Text> 
-        <View style = {styles.line} />
-        <Text style={styles.instructions}> { instructions } </Text>
-        <Bananas  />
-        <View style = {styles.line} />
-        <Submit />
-      
-      </View>
+      <RouterConfig />
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     paddingTop: 50,
     // justifyContent: 'center',
     // alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    // justifyContent: 'flex-start',
+    flexDirection: 'column',
   },
   welcome: {
     fontSize: 20,

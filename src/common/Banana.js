@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Platform, StyleSheet, Text, View, Dimensions} from 'react-native';
 import { AppRegistry, Image } from 'react-native';
 
-export default class Banana extends Component {
+class Banana extends Component {
   render() {
     let pic = {
       uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
@@ -13,15 +13,13 @@ export default class Banana extends Component {
   }
 }
 
-
-
 const styles = StyleSheet.create({
 
     image: {
-      margin:10,
+      margin: 10,
       width: '50%', 
       height: '50%'
     },
-  
   });
-  
+
+  export { Banana };

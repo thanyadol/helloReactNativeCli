@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, View, StyleSheet, Text } from 'react-native';
+import { TouchableOpacity, StyleSheet, Text } from 'react-native';
 
-export default class Submit extends Component {
+import PropTypes from 'prop-types'
+
+class Submit extends Component {
+
+  // lexical name distinguished from the variable-referenced invocation(s)
+  /*onPressClick = function onPressClick() {
+    // ...
+    alert('onPressClick handle');
+  };*/ 
+
   render() {
     return (
        
         <TouchableOpacity style={ styles.button }
-          onPress={onPressClick}>
-          <Text style={ styles.text }> Submit </Text> 
+          onPress={this.props.onPress}>
+          <Text style={ styles.text }> { this.props.text } </Text> 
         </TouchableOpacity>
-
-
     );
   }
 }
+
+Submit.PropTypes = {
+  text: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
+};
 
 const styles = StyleSheet.create({
   view: {
@@ -46,8 +58,4 @@ const styles = StyleSheet.create({
   onPress: PropTypes.func.isRequired
 };*/
 
-// lexical name distinguished from the variable-referenced invocation(s)
-const onPressClick = function onPressClick() {
-  // ...
-  alert('onPressClick handle');
-};
+export { Submit };
