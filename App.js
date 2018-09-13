@@ -8,38 +8,44 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, ScrollView, View, Dimensions} from 'react-native';
-import RouterConfig from './Router';
 
+// import { Provider } from 'react-redux';
+import RouterConfig from './Router';
+//import RouterConfig from './Router';
 
 // components
 // import Banana from './src/components/Banana';
 // import Greet from './src/components/Greet';
 // import Submit from './src/components/Submit';
-// import List from './src/components/List';
+//import List from './src/components/List';
 
 //reuse of group components
-// import { Banana, Submit } from './src/common';
-
+//import { Banana, Submit } from './src/common';
 
 const instructions = Platform.select({
-  ios: 'Hello World with React-Native 16.5 at ' + new Date(),
+  ios: 'Hello World with React-Native 0.56 at ' + new Date(),
   android:
     'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
 });
 
-var title = 'Index';
-let { width, height } = Dimensions.get('window')
+//var title = 'Index';
+//let { width, height } = Dimensions.get('window')
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <RouterConfig />
+
+        <View>
+          
+        </View>
+  
     );
   }
 }
 
+/* 
 const styles = StyleSheet.create({
   container: {
     // flex: 1,
@@ -67,4 +73,4 @@ const styles = StyleSheet.create({
     margin:10,
     width:  width - 20,
   },
-});
+}); */

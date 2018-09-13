@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Platform, StyleSheet, Text, ScrollView, View, Dimensions} from 'react-native';
 
-import { Submit, Head } from '../common';
+import { Submit, Head, Input } from '../common';
 
 //reuse of group components
 //import { Head, Submit } from './src/common';
@@ -73,4 +73,4 @@ const styles = StyleSheet.create({
 });
 
 
-export { Login };
+export default Login;

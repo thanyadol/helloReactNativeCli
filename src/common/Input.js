@@ -1,6 +1,8 @@
-import React, { PropTypes } from 'react';
+//import React, { PropTypes } from 'react';
 import { TextInput, View, Text } from 'react-native';
  
+import PropTypes from 'prop-types'
+
 //implicit props
 const Input = ({ label, value, onChangeText, placeholder, secureTextEntry }) => {
    

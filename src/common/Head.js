@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
   });
  
 // เปิดทางให้ component ตัวอื่นๆ สามารถนำ component ตัวนี้ ไปใช้งานได้
-export default Head;
+export { Head };
