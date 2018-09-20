@@ -11,7 +11,6 @@ import {Platform, StyleSheet, Text, ScrollView, View, Dimensions} from 'react-na
 
 // import { Provider } from 'react-redux';
 import RouterConfig from './Router';
-//import RouterConfig from './Router';
 
 // components
 // import Banana from './src/components/Banana';
@@ -36,11 +35,7 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-
-        <View>
-          
-        </View>
-  
+      <RouterConfig />
     );
   }
 }

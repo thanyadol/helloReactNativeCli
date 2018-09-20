@@ -22,7 +22,7 @@ class Submit extends Component {
   }
 }
 
-Submit.PropTypes = {
+Submit.propTypes = {
   text: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
 };

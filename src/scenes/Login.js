@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Platform, StyleSheet, Text, ScrollView, View, Dimensions} from 'react-native';
 
-import { Submit, Head, Input } from '../common';
-
+import { Submit, Head, Input, Picture } from '../common';
+import { Actions } from 'react-native-router-flux';
 //reuse of group components
 //import { Head, Submit } from './src/common';
 
@@ -11,35 +11,45 @@ let { width, height } = Dimensions.get('window')
 
 class Login extends Component {
 
-  state = {
-    email: '',
-    password: ''
-  };
-
   constructor(props) {
     super(props);
     
+    this.state = {
+        email: '',
+        password: ''
+      };
+
+  };
+
+  onLogin = function onLogin() {
+    //let alertText = "on Login press handle"; //this.state.email;
+    //alert(alertText);
+    Actions.list();
+
   };
 
   render() {
     return (    
         <View  style={styles.container} >
-            <Head text={ title } />
+            {/* <Head text={ title } /> */}
+
+            <Picture />
 
             <Input
+              secureTextEntry={false}
               placeholder="john@gmail.com"
               label="Email"
               value={this.state.email}
-              onChangeText={email => this.setState({ email: this.value })}
-            />
+              onChangeText={email => this.setState({ email })} />
+
             <Input
-              secureTextEntry
+              secureTextEntry={true}
               placeholder="password"
               label="Password"
               value={this.state.password}
-              onChangeText={password => this.setState({ password: this.value })}
-            />
-            <Submit />
+              onChangeText={password => this.setState({ password })} />
+
+            <Submit text="Submit" onPress={ this.onLogin }/>
         </View>
     );
   }
@@ -48,7 +58,7 @@ class Login extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
     paddingTop: 50,
     backgroundColor: '#F5FCFF',
     flexDirection: 'column',
